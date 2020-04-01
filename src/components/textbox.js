@@ -8,7 +8,6 @@ const Textbox = (canvas) => {
     left: 10,
     fontSize: 14,
     padding: 10,
-    backgroundColor: 'red',
     textAlign: 'left'
   });
   canvas.add(text);
