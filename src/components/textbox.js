@@ -1,14 +1,15 @@
 const fabric = window.fabric;
 
-const Textbox = (canvas) => {
+const Textbox = ({canvas, margin = 10}) => {
   let text = new fabric.Textbox('click to enter text', {
     width: 100,
     height: 1000,
-    top: 10,
-    left: 10,
+    top: margin,
+    left: margin,
     fontSize: 14,
-    padding: 10,
-    textAlign: 'left'
+    padding: margin,
+    textAlign: 'left',
+    backgroundColor: 'rgba(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ', 0.75)'
   });
   canvas.add(text);
   canvas.setActiveObject(text);

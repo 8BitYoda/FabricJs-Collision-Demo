@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7082298-58a6-4f91-b2f7-4168a0b1722c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/rectangle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/textbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/textbox.js" afterDir="false" />
+    </list>
+    <list id="48d866f2-cbc8-4f2c-bf86-4aa61a71ccdb" name="commit you shall not" comment="">
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +68,12 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f7082298-58a6-4f91-b2f7-4168a0b1722c" name="Default Changelist" comment="" />
+      <changelist id="48d866f2-cbc8-4f2c-bf86-4aa61a71ccdb" name="commit you shall not" comment="" />
       <created>1585575422555</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585575422555</updated>
-      <workItem from="1585575423802" duration="18909000" />
+      <workItem from="1585575423802" duration="28642000" />
     </task>
     <task id="LOCAL-00001" summary="init setup">
       <created>1585683226762</created>
@@ -76,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585683226762</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init prevent overlap of textboxes">
+      <created>1585749963494</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585749963495</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,7 +97,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="init setup" />
+    <MESSAGE value="init prevent overlap of textboxes" />
+    <option name="LAST_COMMIT_MESSAGE" value="init prevent overlap of textboxes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1228" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585673177354">
@@ -95,10 +109,10 @@
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state x="-1222" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585599738866" />
-    <state x="-1366" y="128" key="CommitChangelistDialog2" timestamp="1585683226559">
+    <state x="-1366" y="128" key="CommitChangelistDialog2" timestamp="1585764879752">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="-1366" y="128" key="CommitChangelistDialog2/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585683226559" />
+    <state x="-1366" y="128" key="CommitChangelistDialog2/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585764879752" />
     <state width="1899" height="273" key="GridCell.Tab.0.bottom" timestamp="1585749935610">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
@@ -115,5 +129,13 @@
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state width="1899" height="273" key="GridCell.Tab.0.right/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585749935609" />
+    <state x="-1122" y="402" key="VCS.EditChangelistDialog" timestamp="1585760376513">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1122" y="402" key="VCS.EditChangelistDialog/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585760376513" />
+    <state x="-1305" y="147" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585758603976">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1305" y="147" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585758603976" />
   </component>
 </project>

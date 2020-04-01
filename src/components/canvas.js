@@ -1,19 +1,17 @@
 import React, { Fragment } from "react";
 import { useEffect, useState } from "react";
 import Textbox from "./textbox";
+import Rectangle from "./rectangle";
 
 const fabric = window.fabric;
 
-const Canvas = (props, {width = 600, height = 400}) => {
+const Canvas = ({width = 600, height = 400, margin = 10, ...props}) => {
   let [canvas, setCanvas] = useState(null);
-  let canvasWidth = width;
-  let canvasHeight = height;
-  let snap = 10; // number of pixels before it snaps to closest objects
-  let margin = 10; // margin in pixels
   let context;
+  let snap = margin; // number of pixels before it snaps to closest objects
 
   useEffect(() => {
-    setCanvas(new fabric.Canvas(context, {backgroundColor: 'lightgray'}));
+    setCanvas(new fabric.Canvas(context, {backgroundColor: 'white'}));
   }, [context]);
 
   const children = React.Children.map(props.children, child => {
@@ -40,14 +38,14 @@ const Canvas = (props, {width = 600, height = 400}) => {
     canvas.loadFromJSON('{\n' +
       '  "objects": [\n' +
       '    {\n' +
-      '      "type": "textbox",\n' +
+      '      "type": "rect",\n' +
       '      "originX": "left",\n' +
       '      "originY": "top",\n' +
-      '      "left": 340,\n' +
-      '      "top": 278,\n' +
-      '      "width": 200,\n' +
-      '      "height": 73.4,\n' +
-      '      "fill": "rgb(0,0,0)",\n' +
+      '      "left": 636,\n' +
+      '      "top": 300,\n' +
+      '      "width": 100,\n' +
+      '      "height": 100,\n' +
+      '      "fill": "rgba(72,253,162, 0.75)",\n' +
       '      "stroke": null,\n' +
       '      "strokeWidth": 1,\n' +
       '      "strokeDashArray": null,\n' +
@@ -67,147 +65,18 @@ const Canvas = (props, {width = 600, height = 400}) => {
       '      "fillRule": "nonzero",\n' +
       '      "globalCompositeOperation": "source-over",\n' +
       '      "transformMatrix": null,\n' +
-      '      "text": "Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! ",\n' +
-      '      "fontSize": 14,\n' +
-      '      "fontWeight": "normal",\n' +
-      '      "fontFamily": "Times New Roman",\n' +
-      '      "fontStyle": "",\n' +
-      '      "lineHeight": 1.16,\n' +
-      '      "textDecoration": "",\n' +
-      '      "textAlign": "left",\n' +
-      '      "textBackgroundColor": "",\n' +
-      '      "styles": {\n' +
-      '        "0": {\n' +
-      '          "1": {},\n' +
-      '          "2": {},\n' +
-      '          "3": {},\n' +
-      '          "4": {},\n' +
-      '          "5": {},\n' +
-      '          "6": {},\n' +
-      '          "7": {},\n' +
-      '          "8": {},\n' +
-      '          "9": {},\n' +
-      '          "10": {},\n' +
-      '          "11": {},\n' +
-      '          "12": {},\n' +
-      '          "13": {},\n' +
-      '          "14": {},\n' +
-      '          "15": {},\n' +
-      '          "16": {},\n' +
-      '          "17": {},\n' +
-      '          "18": {},\n' +
-      '          "19": {},\n' +
-      '          "20": {},\n' +
-      '          "21": {},\n' +
-      '          "22": {},\n' +
-      '          "23": {},\n' +
-      '          "24": {},\n' +
-      '          "25": {},\n' +
-      '          "26": {},\n' +
-      '          "27": {},\n' +
-      '          "28": {},\n' +
-      '          "29": {},\n' +
-      '          "30": {},\n' +
-      '          "31": {},\n' +
-      '          "32": {},\n' +
-      '          "33": {},\n' +
-      '          "34": {},\n' +
-      '          "35": {},\n' +
-      '          "36": {},\n' +
-      '          "37": {},\n' +
-      '          "38": {},\n' +
-      '          "39": {},\n' +
-      '          "40": {},\n' +
-      '          "41": {},\n' +
-      '          "42": {},\n' +
-      '          "43": {},\n' +
-      '          "44": {},\n' +
-      '          "45": {},\n' +
-      '          "46": {},\n' +
-      '          "47": {},\n' +
-      '          "48": {},\n' +
-      '          "49": {},\n' +
-      '          "50": {},\n' +
-      '          "51": {},\n' +
-      '          "52": {},\n' +
-      '          "53": {},\n' +
-      '          "54": {},\n' +
-      '          "55": {},\n' +
-      '          "56": {},\n' +
-      '          "57": {},\n' +
-      '          "58": {},\n' +
-      '          "59": {},\n' +
-      '          "60": {},\n' +
-      '          "61": {},\n' +
-      '          "62": {},\n' +
-      '          "63": {},\n' +
-      '          "64": {},\n' +
-      '          "65": {},\n' +
-      '          "66": {},\n' +
-      '          "67": {},\n' +
-      '          "68": {},\n' +
-      '          "69": {},\n' +
-      '          "70": {},\n' +
-      '          "71": {},\n' +
-      '          "72": {},\n' +
-      '          "73": {},\n' +
-      '          "74": {},\n' +
-      '          "75": {},\n' +
-      '          "76": {},\n' +
-      '          "77": {},\n' +
-      '          "78": {},\n' +
-      '          "79": {},\n' +
-      '          "80": {},\n' +
-      '          "81": {},\n' +
-      '          "82": {},\n' +
-      '          "83": {},\n' +
-      '          "84": {},\n' +
-      '          "85": {},\n' +
-      '          "86": {},\n' +
-      '          "87": {},\n' +
-      '          "88": {},\n' +
-      '          "89": {},\n' +
-      '          "90": {},\n' +
-      '          "91": {},\n' +
-      '          "92": {},\n' +
-      '          "93": {},\n' +
-      '          "94": {},\n' +
-      '          "95": {},\n' +
-      '          "96": {},\n' +
-      '          "97": {},\n' +
-      '          "98": {},\n' +
-      '          "99": {},\n' +
-      '          "100": {},\n' +
-      '          "101": {},\n' +
-      '          "102": {},\n' +
-      '          "103": {},\n' +
-      '          "104": {},\n' +
-      '          "105": {},\n' +
-      '          "106": {},\n' +
-      '          "107": {},\n' +
-      '          "108": {},\n' +
-      '          "109": {},\n' +
-      '          "110": {},\n' +
-      '          "111": {},\n' +
-      '          "112": {},\n' +
-      '          "113": {},\n' +
-      '          "114": {},\n' +
-      '          "115": {},\n' +
-      '          "116": {},\n' +
-      '          "117": {}\n' +
-      '        }\n' +
-      '      },\n' +
-      '      "minWidth": 20\n' +
+      '      "rx": 0,\n' +
+      '      "ry": 0\n' +
       '    },\n' +
       '    {\n' +
-      '      "type": "textbox",\n' +
+      '      "type": "rect",\n' +
       '      "originX": "left",\n' +
       '      "originY": "top",\n' +
-      '      "left": 28,\n' +
-      '      "top": 30,\n' +
-      '      "width": 208,\n' +
-      '      "height": 110.11,\n' +
-      '      "fill": "rgb(0,0,0)",\n' +
+      '      "left": 341,\n' +
+      '      "top": 57,\n' +
+      '      "width": 100,\n' +
+      '      "height": 100,\n' +
+      '      "fill": "rgba(187,109,207, 0.75)",\n' +
       '      "stroke": null,\n' +
       '      "strokeWidth": 1,\n' +
       '      "strokeDashArray": null,\n' +
@@ -227,146 +96,73 @@ const Canvas = (props, {width = 600, height = 400}) => {
       '      "fillRule": "nonzero",\n' +
       '      "globalCompositeOperation": "source-over",\n' +
       '      "transformMatrix": null,\n' +
-      '      "text": "Hello Corona!\\n\\nHello Corona!Hello Corona! Hello Corona!Hello Corona! Hello Corona!Hello Corona!Hello Corona! Hello Corona!",\n' +
-      '      "fontSize": 14,\n' +
-      '      "fontWeight": "normal",\n' +
-      '      "fontFamily": "Times New Roman",\n' +
-      '      "fontStyle": "",\n' +
-      '      "lineHeight": 1.16,\n' +
-      '      "textDecoration": "",\n' +
-      '      "textAlign": "left",\n' +
-      '      "textBackgroundColor": "",\n' +
-      '      "styles": {\n' +
-      '        "0": {\n' +
-      '          "1": {},\n' +
-      '          "2": {},\n' +
-      '          "3": {},\n' +
-      '          "4": {},\n' +
-      '          "5": {},\n' +
-      '          "6": {},\n' +
-      '          "7": {},\n' +
-      '          "8": {},\n' +
-      '          "9": {},\n' +
-      '          "10": {},\n' +
-      '          "11": {},\n' +
-      '          "12": {}\n' +
-      '        },\n' +
-      '        "1": {},\n' +
-      '        "2": {\n' +
-      '          "0": {},\n' +
-      '          "1": {},\n' +
-      '          "2": {},\n' +
-      '          "3": {},\n' +
-      '          "4": {},\n' +
-      '          "5": {},\n' +
-      '          "6": {},\n' +
-      '          "7": {},\n' +
-      '          "8": {},\n' +
-      '          "9": {},\n' +
-      '          "10": {},\n' +
-      '          "11": {},\n' +
-      '          "12": {},\n' +
-      '          "13": {},\n' +
-      '          "14": {},\n' +
-      '          "15": {},\n' +
-      '          "16": {},\n' +
-      '          "17": {},\n' +
-      '          "18": {},\n' +
-      '          "19": {},\n' +
-      '          "20": {},\n' +
-      '          "21": {},\n' +
-      '          "22": {},\n' +
-      '          "23": {},\n' +
-      '          "24": {},\n' +
-      '          "25": {},\n' +
-      '          "26": {},\n' +
-      '          "27": {},\n' +
-      '          "28": {},\n' +
-      '          "29": {},\n' +
-      '          "30": {},\n' +
-      '          "31": {},\n' +
-      '          "32": {},\n' +
-      '          "33": {},\n' +
-      '          "34": {},\n' +
-      '          "35": {},\n' +
-      '          "36": {},\n' +
-      '          "37": {},\n' +
-      '          "38": {},\n' +
-      '          "39": {},\n' +
-      '          "40": {},\n' +
-      '          "41": {},\n' +
-      '          "42": {},\n' +
-      '          "43": {},\n' +
-      '          "44": {},\n' +
-      '          "45": {},\n' +
-      '          "46": {},\n' +
-      '          "47": {},\n' +
-      '          "48": {},\n' +
-      '          "49": {},\n' +
-      '          "50": {},\n' +
-      '          "51": {},\n' +
-      '          "52": {},\n' +
-      '          "53": {},\n' +
-      '          "54": {},\n' +
-      '          "55": {},\n' +
-      '          "56": {},\n' +
-      '          "57": {},\n' +
-      '          "58": {},\n' +
-      '          "59": {},\n' +
-      '          "60": {},\n' +
-      '          "61": {},\n' +
-      '          "62": {},\n' +
-      '          "63": {},\n' +
-      '          "64": {},\n' +
-      '          "65": {},\n' +
-      '          "66": {},\n' +
-      '          "67": {},\n' +
-      '          "68": {},\n' +
-      '          "69": {},\n' +
-      '          "70": {},\n' +
-      '          "71": {},\n' +
-      '          "72": {},\n' +
-      '          "73": {},\n' +
-      '          "74": {},\n' +
-      '          "75": {},\n' +
-      '          "76": {},\n' +
-      '          "77": {},\n' +
-      '          "78": {},\n' +
-      '          "79": {},\n' +
-      '          "80": {},\n' +
-      '          "81": {},\n' +
-      '          "82": {},\n' +
-      '          "83": {},\n' +
-      '          "84": {},\n' +
-      '          "85": {},\n' +
-      '          "86": {},\n' +
-      '          "87": {},\n' +
-      '          "88": {},\n' +
-      '          "89": {},\n' +
-      '          "90": {},\n' +
-      '          "91": {},\n' +
-      '          "92": {},\n' +
-      '          "93": {},\n' +
-      '          "94": {},\n' +
-      '          "95": {},\n' +
-      '          "96": {},\n' +
-      '          "97": {},\n' +
-      '          "98": {},\n' +
-      '          "99": {},\n' +
-      '          "100": {},\n' +
-      '          "101": {},\n' +
-      '          "102": {},\n' +
-      '          "103": {},\n' +
-      '          "104": {},\n' +
-      '          "105": {},\n' +
-      '          "106": {},\n' +
-      '          "107": {}\n' +
-      '        }\n' +
-      '      },\n' +
-      '      "minWidth": 20\n' +
+      '      "rx": 0,\n' +
+      '      "ry": 0\n' +
+      '    },\n' +
+      '    {\n' +
+      '      "type": "rect",\n' +
+      '      "originX": "left",\n' +
+      '      "originY": "top",\n' +
+      '      "left": 51,\n' +
+      '      "top": 279,\n' +
+      '      "width": 100,\n' +
+      '      "height": 100,\n' +
+      '      "fill": "rgba(72,71,38, 0.75)",\n' +
+      '      "stroke": null,\n' +
+      '      "strokeWidth": 1,\n' +
+      '      "strokeDashArray": null,\n' +
+      '      "strokeLineCap": "butt",\n' +
+      '      "strokeLineJoin": "miter",\n' +
+      '      "strokeMiterLimit": 10,\n' +
+      '      "scaleX": 1,\n' +
+      '      "scaleY": 1,\n' +
+      '      "angle": 0,\n' +
+      '      "flipX": false,\n' +
+      '      "flipY": false,\n' +
+      '      "opacity": 1,\n' +
+      '      "shadow": null,\n' +
+      '      "visible": true,\n' +
+      '      "clipTo": null,\n' +
+      '      "backgroundColor": "",\n' +
+      '      "fillRule": "nonzero",\n' +
+      '      "globalCompositeOperation": "source-over",\n' +
+      '      "transformMatrix": null,\n' +
+      '      "rx": 0,\n' +
+      '      "ry": 0\n' +
+      '    },\n' +
+      '    {\n' +
+      '      "type": "rect",\n' +
+      '      "originX": "left",\n' +
+      '      "originY": "top",\n' +
+      '      "left": 353,\n' +
+      '      "top": 541,\n' +
+      '      "width": 100,\n' +
+      '      "height": 100,\n' +
+      '      "fill": "rgba(116,252,218, 0.75)",\n' +
+      '      "stroke": null,\n' +
+      '      "strokeWidth": 1,\n' +
+      '      "strokeDashArray": null,\n' +
+      '      "strokeLineCap": "butt",\n' +
+      '      "strokeLineJoin": "miter",\n' +
+      '      "strokeMiterLimit": 10,\n' +
+      '      "scaleX": 1,\n' +
+      '      "scaleY": 1,\n' +
+      '      "angle": 0,\n' +
+      '      "flipX": false,\n' +
+      '      "flipY": false,\n' +
+      '      "opacity": 1,\n' +
+      '      "shadow": null,\n' +
+      '      "visible": true,\n' +
+      '      "clipTo": null,\n' +
+      '      "backgroundColor": "",\n' +
+      '      "fillRule": "nonzero",\n' +
+      '      "globalCompositeOperation": "source-over",\n' +
+      '      "transformMatrix": null,\n' +
+      '      "rx": 0,\n' +
+      '      "ry": 0\n' +
       '    }\n' +
       '  ],\n' +
-      '  "background": "lightgray"\n' +
+      '  "background": "white"\n' +
       '}');
 
     // locks items so they cant be moved or text changed.
@@ -383,41 +179,65 @@ const Canvas = (props, {width = 600, height = 400}) => {
 
   const findNewPos = (distX, distY, target, obj) => {
     // See whether to focus on X or Y axis
-    if(Math.abs(distX) > Math.abs(distY)) {
+    if (Math.abs(distX) > Math.abs(distY)) {
       if (distX > 0) {
         target.setLeft(obj.getLeft() - target.getWidth() - margin);
+
+        // pushed out left side of canvas
+        if (target.getLeft() < snap) {
+          target.setLeft(obj.getLeft() + target.getWidth() - (margin * 2));
+        }
       } else {
-        target.setLeft(obj.getLeft() + obj.getWidth() + margin);
+        target.setLeft(obj.getLeft() + target.getWidth() + margin);
+
+        // pushed out right side of canvas
+        if ((target.getWidth() + target.getLeft()) > (width - snap)) {
+          target.setLeft(obj.getLeft() - target.getWidth() + margin);
+        }
       }
     } else {
       if (distY > 0) {
         target.setTop(obj.getTop() - target.getHeight() - margin);
+
+        // pushed out top of canvas
+        if (target.getTop() < snap) {
+          target.setTop( obj.getTop() + target.getHeight() - (margin * 2));
+        }
       } else {
         target.setTop(obj.getTop() + obj.getHeight() + margin);
+
+        // pushed out bottom of canvas
+        if ((target.getHeight() + target.getTop()) > (height - snap)) {
+          target.setTop(obj.getTop() - target.getHeight() + margin);
+        }
       }
     }
   };
 
-  if(canvas) {
+  if (canvas) {
     canvas.on('object:moving', (options) => {
       // Sets corner position coordinates based on current angle, width and height
       options.target.setCoords();
 
       // Don't allow objects off the canvas
+      // canvas left
       if (options.target.getLeft() < snap) {
         options.target.setLeft(margin);
       }
 
+      // canvas top
       if (options.target.getTop() < snap) {
         options.target.setTop(margin);
       }
 
-      if ((options.target.getWidth() + options.target.getLeft()) > (canvasWidth - snap)) {
-        options.target.setLeft(canvasWidth - options.target.getWidth() - margin);
+      // canvas right
+      if ((options.target.getWidth() + options.target.getLeft()) > (width - snap)) {
+        options.target.setLeft(width - options.target.getWidth() - margin);
       }
 
-      if ((options.target.getHeight() + options.target.getTop()) > (canvasHeight - snap)) {
-        options.target.setTop(canvasHeight - options.target.getHeight() - margin);
+      // canvas bottom
+      if ((options.target.getHeight() + options.target.getTop()) > (height - snap)) {
+        options.target.setTop(height - options.target.getHeight() - margin);
       }
 
       // Loop through objects
@@ -491,7 +311,7 @@ const Canvas = (props, {width = 600, height = 400}) => {
           // Snap target TL to object BL
           if (Math.abs(options.target.getTop() - (obj.getTop() + obj.getHeight())) < snap) {
             options.target.setLeft(obj.getLeft());
-            options.target.setTop(obj.getTop() + obj.getHeight());
+            options.target.setTop(obj.getTop() + obj.getHeight() + margin);
           }
 
           // Snap target BL to object TL
@@ -591,15 +411,22 @@ const Canvas = (props, {width = 600, height = 400}) => {
       <button onClick={ e => {
         e.preventDefault();
         console.log(canvas.toJSON())
-      } }>To JSON</button>
-      <button onClick={load}>Load</button>
-      <button onClick={makeGroup}>Group all</button>
+      } }>To JSON
+      </button>
+      <button onClick={ load }>Load</button>
+      <button onClick={ makeGroup }>Group all</button>
       <button onClick={ e => {
         e.preventDefault();
-        Textbox(canvas);
-      } }>Add new Textbox</button>
+        Textbox({canvas, margin});
+      } }>Add new Textbox
+      </button>
+      <button onClick={ e => {
+        e.preventDefault();
+        Rectangle({canvas});
+      } }>Add new Rect
+      </button>
     </Fragment>
   )
 };
 
-export default Canvas
+export default Canvas;
