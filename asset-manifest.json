@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/FabricJs-Collision-Demo/static/css/main.3d47ee05.chunk.css",
+    "main.js": "/FabricJs-Collision-Demo/static/js/main.2ea2b2e9.chunk.js",
+    "main.js.map": "/FabricJs-Collision-Demo/static/js/main.2ea2b2e9.chunk.js.map",
+    "runtime-main.js": "/FabricJs-Collision-Demo/static/js/runtime-main.24125279.js",
+    "runtime-main.js.map": "/FabricJs-Collision-Demo/static/js/runtime-main.24125279.js.map",
+    "static/js/2.763d74f9.chunk.js": "/FabricJs-Collision-Demo/static/js/2.763d74f9.chunk.js",
+    "static/js/2.763d74f9.chunk.js.map": "/FabricJs-Collision-Demo/static/js/2.763d74f9.chunk.js.map",
+    "index.html": "/FabricJs-Collision-Demo/index.html",
+    "precache-manifest.e0225672b2fdf620db3efd778db9d494.js": "/FabricJs-Collision-Demo/precache-manifest.e0225672b2fdf620db3efd778db9d494.js",
+    "service-worker.js": "/FabricJs-Collision-Demo/service-worker.js",
+    "static/css/main.3d47ee05.chunk.css.map": "/FabricJs-Collision-Demo/static/css/main.3d47ee05.chunk.css.map",
+    "static/js/2.763d74f9.chunk.js.LICENSE.txt": "/FabricJs-Collision-Demo/static/js/2.763d74f9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.24125279.js",
+    "static/js/2.763d74f9.chunk.js",
+    "static/css/main.3d47ee05.chunk.css",
+    "static/js/main.2ea2b2e9.chunk.js"
+  ]
+}
