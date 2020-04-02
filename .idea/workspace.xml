@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7082298-58a6-4f91-b2f7-4168a0b1722c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/rectangle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/textbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/textbox.js" afterDir="false" />
     </list>
@@ -38,6 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -73,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585575422555</updated>
-      <workItem from="1585575423802" duration="28642000" />
+      <workItem from="1585575423802" duration="31229000" />
     </task>
     <task id="LOCAL-00001" summary="init setup">
       <created>1585683226762</created>
@@ -89,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585749963495</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixing overlap when an element is pushed off canvas">
+      <created>1585764967174</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585764967174</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,7 +104,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init setup" />
     <MESSAGE value="init prevent overlap of textboxes" />
-    <option name="LAST_COMMIT_MESSAGE" value="init prevent overlap of textboxes" />
+    <MESSAGE value="fixing overlap when an element is pushed off canvas" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing overlap when an element is pushed off canvas" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1228" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585673177354">
@@ -109,26 +116,30 @@
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state x="-1222" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585599738866" />
-    <state x="-1366" y="128" key="CommitChangelistDialog2" timestamp="1585764879752">
+    <state x="-1366" y="128" key="CommitChangelistDialog2" timestamp="1585764967038">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="-1366" y="128" key="CommitChangelistDialog2/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585764879752" />
-    <state width="1899" height="273" key="GridCell.Tab.0.bottom" timestamp="1585749935610">
+    <state x="-1366" y="128" key="CommitChangelistDialog2/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585764967038" />
+    <state x="-1820" y="123" width="1720" height="805" key="DiffContextDialog" timestamp="1585841021525">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="273" key="GridCell.Tab.0.bottom/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585749935610" />
-    <state width="1899" height="273" key="GridCell.Tab.0.center" timestamp="1585749935609">
+    <state x="-1820" y="123" width="1720" height="805" key="DiffContextDialog/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585841021525" />
+    <state width="1899" height="273" key="GridCell.Tab.0.bottom" timestamp="1585840985811">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="273" key="GridCell.Tab.0.center/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585749935609" />
-    <state width="1899" height="273" key="GridCell.Tab.0.left" timestamp="1585749935605">
+    <state width="1899" height="273" key="GridCell.Tab.0.bottom/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585840985811" />
+    <state width="1899" height="273" key="GridCell.Tab.0.center" timestamp="1585840985810">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="273" key="GridCell.Tab.0.left/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585749935605" />
-    <state width="1899" height="273" key="GridCell.Tab.0.right" timestamp="1585749935609">
+    <state width="1899" height="273" key="GridCell.Tab.0.center/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585840985810" />
+    <state width="1899" height="273" key="GridCell.Tab.0.left" timestamp="1585840985810">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="273" key="GridCell.Tab.0.right/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585749935609" />
+    <state width="1899" height="273" key="GridCell.Tab.0.left/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585840985810" />
+    <state width="1899" height="273" key="GridCell.Tab.0.right" timestamp="1585840985810">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1899" height="273" key="GridCell.Tab.0.right/0.23.1440.825/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1585840985810" />
     <state x="-1122" y="402" key="VCS.EditChangelistDialog" timestamp="1585760376513">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
