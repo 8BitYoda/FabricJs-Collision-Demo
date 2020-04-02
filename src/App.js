@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Canvas/>
+      <Canvas height={680} width={800}/>
     </div>
   )
 };
